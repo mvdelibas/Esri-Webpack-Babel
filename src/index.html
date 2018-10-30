@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>esri-webpack-babel-demo</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/<%= htmlWebpackPlugin.options.jsapiVersion %>/esri/css/main.css">
+</head>
+
+<body>
+    <header>
+        <p>Header</p>
+    </header>
+    <main>
+        <div id="appDiv"></div>
+    </main>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+<script src="https://js.arcgis.com/<%= htmlWebpackPlugin.options.jsapiVersion %>/"></script>
+<script>
+    require(["js/app.bundle.js"])
+</script>
+
+</html>
