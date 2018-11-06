@@ -3,4 +3,6 @@ import { MapViewUtil } from './Utils/MapViewUtils';
 import './app.scss';
 
 
-new MapViewUtil().metodMapView();
+const mapView = new MapViewUtil();
+mapView.metodMapView();
+mapView.metodSorgu();

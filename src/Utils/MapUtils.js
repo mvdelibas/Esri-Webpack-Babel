@@ -1,8 +1,23 @@
 import Map from 'esri/Map';
+import TileLayer from "esri/layers/TileLayer";
 
-export class MapUtil {
+import { LayerUtils } from "./LayerUtils";
+
+export class MapUtil extends LayerUtils {
     constructor () {
-        this.map =new Map({ basemap: 'streets' });
+        super();
+    } 
+
+    methodMap() {
+       const tileLayer = super.metodTileLayer();
+       const mapImageLayer = super.metodMapImageLayer();
+
+       const map = new Map({
+           layers: [tileLayer, mapImageLayer]
+       });
+
+       return map;
     }
+    
 
 } 
